@@ -4,14 +4,15 @@
 #### shift+alt+위아래방향키
 ##### shift+alt+위아래방향키
 ###### shift+alt+위아래방향키
-
+---
 ### 스탈일
 **굵게(Bold)**
 __굵게(Bold)__
 *이탤릭(italic, 기울어진 글자)*
 _이탤릭(italic, 기울어진 글자)_
 ~~취소선~~
-
+> 인용구
+---
 ### 목록
 #### 순서있는 목록(ol)
 1. 대한민국
@@ -26,13 +27,18 @@ _이탤릭(italic, 기울어진 글자)_
 - 음료
     + 아이스아메리카노
     + 사이다
-
+---
 ### 코드 및 코드 블록
 생성형AI와 챗GPT를 활용한 `빅데이터` 분석 & 자동화 시스템 구축
 ```python
 print("Hello Python!")
 ```
-
+---
 ### 링크와 이미지
 참고: [Markdown 공식 문서](https://www.markdownguide.org)
 이미지: ![파이썬 로고](https://www.python.org/static/img/python-logo.png)
+---
+### 표
+\ 이름 \ 역할 \ 비고 \
+\--\--\--\
+\ 홍길동 \ 개발자 \ 프론트 \
