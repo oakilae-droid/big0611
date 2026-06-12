@@ -46,7 +46,9 @@ print("Hello Python!")
 ```
 ---
 ### 링크와 이미지
-참고: [Markdown 공식 문서](https://www.markdownguide.org)
+링크:
+![세피로트](https://cdn.namu.wiki/r/http%3A%2F%2Fi.imgur.com%2F2megHz2.png "툴팁 메시지. 이 부분은 생략해도 됩니다.")
+[Markdown 공식 문서](https://www.markdownguide.org)
 이미지: ![파이썬 로고](https://www.python.org/static/img/python-logo.png)
 
 ### 표
