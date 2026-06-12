@@ -11,8 +11,9 @@ __굵게(Bold)__
 *이탤릭(italic, 기울어진 글자)*
 _이탤릭(italic, 기울어진 글자)_
 ~~취소선~~
-> 인용구;
-I need to highlight these ==very important words==.
+> 인용구
+H~2~O
+X^2^
 ---
 ### 목록
 #### 순서있는 목록(ol)
@@ -38,7 +39,7 @@ print("Hello Python!")
 ### 링크와 이미지
 참고: [Markdown 공식 문서](https://www.markdownguide.org)
 이미지: ![파이썬 로고](https://www.python.org/static/img/python-logo.png)
----
+
 ### 표
 \ 이름 \ 역할 \ 비고 \
 \--\--\--\
