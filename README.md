@@ -31,6 +31,7 @@ _이탤릭(italic, 기울어진 글자)_
 1. 체코
 
 #### 순서없는 목록(ul)
+> * 또는  + 또는 -
 - 점심
     - 짜장면
     - 된장찌개
@@ -46,14 +47,13 @@ print("Hello Python!")
 ```
 ---
 ### 링크와 이미지
-링크:
-![세피로트](https://cdn.namu.wiki/r/http%3A%2F%2Fi.imgur.com%2F2megHz2.png "툴팁 메시지. 이 부분은 생략해도 됩니다.")
-[Markdown 공식 문서](https://www.markdownguide.org)
+참고: [Markdown 공식 문서](https://www.markdownguide.org)
+링크: ![세피로트](https://cdn.namu.wiki/r/http%3A%2F%2Fi.imgur.com%2F2megHz2.png "툴팁 메시지. 이 부분은 생략해도 됩니다.")
 이미지: ![파이썬 로고](https://www.python.org/static/img/python-logo.png)
 
 ### 표
 \ 이름 \ 역할 \ 비고 \
-\--\--\--\
+\------\-----\------\
 \ 홍길동 \ 빅데이터 개발자 \ 풀스택 \
 
 ### 할일 목록(체크박스)
