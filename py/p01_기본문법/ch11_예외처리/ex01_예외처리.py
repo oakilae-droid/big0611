@@ -31,8 +31,7 @@ def get_valid_age():
         except ValueError as e:
             print(f'숫자만 입력해주세요: {e}')
         except KeyboardInterrupt:
-            print("\n프로그램을 종료합니다.")
-            break
+            print("\n프로그램을 종료합니다.")            
 # 함수 호출
 try:
     user_age = get_valid_age()
