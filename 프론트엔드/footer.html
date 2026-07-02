@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산 웹사이트 푸터</title>
+    <style>
+        /* 1. 구글 무료 폰트 불러오기 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+        /* 2. 컬러 팔레트 변수 설정 (가이드 준수) */
+        :root {
+            --primary-color: #2465E8;
+            --secondary-color: #6C757D;
+            --accent-color: #25436E;
+            --bg-color: #f8f9fa;
+        }
+
+        /* 3. 전체 기본 타이포그래피 설정 */
+        body {
+            margin: 0;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif; 
+        }
+
+        /* 4. 푸터 스타일링 */
+        .site-footer {
+            background-color: var(--accent-color); /* 푸터 배경으로 Accent Color 활용 */
+            color: var(--bg-color); /* 가이드에 명시된 A 태그 색상 활용 */
+            padding: 48px 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .footer-container {
+            max-width: 1200px; /* 웹페이지 최대 너비 */
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin-bottom: 24px;
+        }
+
+        .footer-links a {
+            color: var(--bg-color);
+            text-decoration: none;
+            margin-right: 24px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        /* 링크 호버 시 Primary Color 적용 */
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-info {
+            margin-bottom: 32px;
+        }
+
+        .footer-info p {
+            margin: 6px 0;
+            opacity: 0.8; /* 텍스트가 배경과 은은하게 어우러지도록 투명도 조절 */
+        }
+
+        /* 5. 카피라이트 영역 */
+        .footer-copyright {
+            border-top: 1px solid var(--secondary-color); /* Secondary Color를 테두리에 사용 */
+            padding-top: 24px;
+            font-family: 'Inter', sans-serif; /* 영문/숫자 위주이므로 Inter 폰트 우선 적용 */
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 푸터 시작 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- 하단 메뉴 링크 -->
+            <div class="footer-links">
+                <a href="#">회사소개</a>
+                <a href="#">이용약관</a>
+                <a href="#"><strong>개인정보처리방침</strong></a>
+                <a href="#">매물등록 안내</a>
+            </div>
+            
+            <!-- 부동산/사업자 정보 -->
+            <div class="footer-info">
+                <p>상호명: (주)좋은부동산 중개법인 | 대표자: 홍길동 | 사업자등록번호: 123-45-67890</p>
+                <p>주소: 서울특별시 강남구 테헤란로 123, 4층 | 대표전화: 02-1234-5678</p>
+                <p>중개사무소 등록번호: 11680-2026-12345</p>
+            </div>
+
+            <!-- 카피라이트 -->
+            <div class="footer-copyright">
+                &copy; 2026 Good Real Estate. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- 푸터 끝 -->
+
+</body>
+</html>
