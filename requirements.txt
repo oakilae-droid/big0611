@@ -4,7 +4,10 @@ yfinance
 seaborn
 matplotlib
 plotly
+nbformat
 streamlit
 requests
 BeautifulSoup4
 selenium
+scikit-learn
+tensorflow
