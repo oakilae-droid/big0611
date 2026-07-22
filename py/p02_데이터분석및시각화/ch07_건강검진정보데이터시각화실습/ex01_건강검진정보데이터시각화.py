@@ -92,3 +92,13 @@ sns.boxenplot(x=df['연령코드'], y=df['혈색소'])
 # 1. 연령과 성별에 따른 혈당 분석
 fig = plt.figure(figsize=(12, 5))
 sns.barplot(x=df['연령코드'], y=df['혈당'], hue=df['성별코드'])
+
+# 2. 나이에 따른 허리둘레 분포
+fig = plt.figure(figsize=(12, 5))
+sns.violinplot(x=df['연령코드'], y=df['허리둘레'], hue=df['성별코드'])
+
+
+# 지역별 분석
+# 1. 지역과 연령에 따른 혈당 수치 히트맵
+pivot_df = df.pivot_table('혈당', '시도코드', '연령코드')
+sns.heatmap(pivot_df)
