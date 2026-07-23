@@ -56,3 +56,51 @@ color = st.radio(
 agree = st.checkbox('이용약관에 동의합니다.')
 if agree:
     st.write('동의해주셔서 감사합니다.')
+
+# 5. 여러 개 선택하기
+hobbies = st.multiselect(
+    '취미를 선택하세요. (여러 개 선택 가능)',
+    ['독서', '영화감상', '운동', '여행', '음악감상']
+)
+
+if hobbies:
+    st.write('선택한 취미:', hobbies)
+
+# 6. 날짜와 시간 입력
+today = st.date_input('날짜를 선택하세요.')
+current_time = st.time_input('시간을 선택하세요')
+
+st.write(f'선택한 날짜: {today}')
+st.write(f'선택한 시간: {current_time}')
+
+# 미디어 컴포넌트
+# 1. 이미지 표시하기 
+# <img src="경로/파일명" width=300 alt="대체텍스트">
+# 비트맵(jpg, gif, png), 벡터(svg)
+# 인터넷 이미지 표시
+# https://picsum.photos -> 더미이미지(랜덤 사진)
+# https://unsplash.com/ko -> 사진
+# https://www.dummyimage.com/
+# https://www.pngwing.com/ko -> 심볼, 아이콘
+st.image('https://picsum.photos/200/300', caption='인터넷 이미지')
+# st.image('https://en, caption='부동산', width=300)
+
+# 로컬 이미지 파일 표시(파일이 있는 경우)
+st.image('my_image.jpg', caption='내 이미지', width=300)
+st.image('unsplash.jpg', caption='아파트', width=300)
+st.image('pngwing.png', caption='아이콘')
+
+# 비디오 파일 재생 
+# <video src="경로/파일명"></video>
+# mp4, webm, ogv(ogg)
+st.video('my_video.mp4', width=300)
+
+# 유튜브 비디오 표시 <iframe src="경로/파일명"></iframe>
+st.video('https://youtu.be/BU-DXvjGEqg?si=pEbyz3fKnu8LG4NG', width=300)
+
+# 오디오 파일 재생
+# 무료 소리 창고: https://pgtd.tistory.com/270
+# mp3(노래), ogg(ogv), wav(미디음)
+
+st.audio('ding.mp3')
+st.audio('my_audio.mp3')
