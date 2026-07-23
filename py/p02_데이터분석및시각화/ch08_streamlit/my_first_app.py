@@ -38,24 +38,21 @@ st.write(f'당신이 선택한 과일은 {fruit} 입니다.')
 
 # 2. 텍스트 입력받기
 name = st.text_input('이름을 입력하세요')
-age = st.text_input('나이를 입력하세요', min_value=0, max_value=120)
+age = st.number_input('나이를 입력하세요', min_value=0, max_value=120)
 
 if name and age:
-    st.write(f'{name}님은 {age}살 입니다.')
+    st.write(f'{name}님은 {age}살입니다.')
 
-# 3. 슬라이드로 값 조정하기 <input type='range'>
+# 3. 슬라이드로 값 조정하기 <input type="range">
 temperature = st.slider('온도를 선택하세요', 0, 40, 25)
 st.write(f'선택한 온도는 {temperature}도 입니다.')
 
-# 4. 라디오 버튼과 체크박스 <input type="radio|checkbox"
+# 4. 라디오 버튼과 체크박스 <input type="radio|checkbox">
 color = st.radio(
-    '좋아하는 색깔을 선택하세요:',
-    ['빨강', '파랑', '초록'],
-    
+    '좋아하는 색갈을 선택하세요',
+    ['빨강', '파랑', '초록']
 )
 
 agree = st.checkbox('이용약관에 동의합니다.')
 if agree:
-    st.write('감사합니다! 동의하셨습니다.')
-else:
-    st.write('동의해주세요.')
+    st.write('동의해주셔서 감사합니다.')

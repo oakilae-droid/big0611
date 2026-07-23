@@ -4,10 +4,12 @@ yfinance
 seaborn
 matplotlib
 plotly
+jupytext
 nbformat
 streamlit
+streamlit-autorefresh
 requests
-BeautifulSoup4
+beautifulsoup4
 selenium
 scikit-learn
 tensorflow
