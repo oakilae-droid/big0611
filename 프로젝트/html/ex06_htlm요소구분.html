@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 요소 구분</title>
+    <!-- Metadata -->
+    <base href="">
+    <link rel="stylesheet" href="">
+    <meta>
+    <noscript>
+        <p>자바스크립트가 꺼져 있을 때 안내</p>
+        <p>이 사이트를 이용하려면 Javascript를 활성화해주세요.</p>
+    </noscript>
+    <script>//내부 자바스크립트 작성</script>
+    <style>/* 내부 CSS 작성 */</style>
+    <template></template>
+    <title></title>
+</head>
+<body>
+    <h1>콘텐츠 카테고리</h1>
+    <!-- Flow -->
+    <h2>Flow</h2>
+    <!-- Metadata -->
+    <h2>Metadata</h2>
+    <p>메타데이터 관련 요소는 head 사이에 쓴다.</p>
+    <!-- Heading -->
+    <h2>Heading</h2>
+    <hgroup>
+        <h1>큰 제목: 상단 로고, 본문 전체 제목</h1>
+        <h2>중간 제목: 섹션 제목</h2>
+        <h3>작은 제목</h3>
+        <h4>더 작은 제목</h4>
+        <h5>더더 작은 제목</h5>
+        <h6>더더더 작은 제목</h6>
+    </hgroup>
+    <!-- Embedded -->
+    <h2>Embedded</h2>
+    <img src="경로/파일명" alt="대체텍스트">
+    <video src="경로/파일명"></video>
+    <video>
+        <source src="경로/파일명" type="video/mp4">
+        <source src="경로/파일명" type="video/webm">
+        <source src="경로/파일명" type="video/ogg">
+        <source src="경로/파일명" type="video/ogv">
+        <p>브라우저가 video 태그를 지원하지 않습니다.</p>
+    </video>
+    <audio src="경로/파일명" controls></audio>
+    <audio controls>
+        <source src="경로/파일명" type="audio/mp3">
+        <source src="경로/파일명" type="audio/wav">
+        <source src="경로/파일명" type="audio/ogg">
+        <p>브라우저가 audio 태그를 지원하지 않습니다.</p>
+    </audio>
+    <iframe src="경로/파일명"></iframe>
+    <picture>
+        <!-- 992px 보다 크면데스크탑.png를 출력 -->
+        <source media="(min-width: 992px)" srcset="데스크탑.png">
+        <!-- 768px 보다 크면 테블릿.png를 출력 -->
+        <source media="(min-width: 768px)" srcset="테블릿.png">
+        <!-- 그렇지 않으면 모바일용.png 출력 -->
+        <img src="모바일용.png" alt="프로필 이미지">
+    </picture>
+    <canvas></canvas>
+    <svg></svg>
+    <object data="" type=""></object>
+    <embed src="" type="">
+
+    <!-- Interactive -->
+    <h2>Interactive</h2>
+    <a href="">링크</a>
+    <input type="password" id="pwd">
+    <label for="pwd">비밀번호</label>
+    <textarea name="" id=""></textarea>
+    <label for=""></label>
+    <button type="submit">로그인</button>
+    <select name="" id=""></select>
+
+    <details></details>
+    <keygen></keygen>
+
+    <img src="" alt="">
+    <video src=""></video>
+    <audio src=""></audio>
+    <iframe src=""></iframe>
+    <object data="" type=""></object>
+    <embed src="" type="">
+
+    <!-- Phrasing -->
+    <h2>Phrasing</h2>
+    <span>인라인 스타일링, 테그스트 그룹화</span>
+    <br>: 줄바꿈
+    
+    <strong>강하게 중요 텍스트</strong>
+    <blockquote>웹 사이트 참조(블록)</blockquote>
+    <q>웹 사이트 참조(인라인)</q>
+    <em>emphasis강조</em>
+    <small>작은 글자: 부가 가치세</small>
+    <del>이전날짜</del>
+    <ins>변경날짜</ins>
+
+    <b>bold(굵게)</b>
+    <i>italic(이텔릭)</i>
+    <u>underline(밑줄)</u>
+    <s>Strikethrough취소선</s>
+    
+    아래<sub>첨자</sub>
+    윗<sup>첨자</sup>
+    
+    <abbr title=""></abbr>
+
+    <bdi></bdi>
+    <bdo dir=""></bdo>
+    <cite></cite>
+    <code></code>
+    <dfn></dfn>
+    <data value=""></data>
+    <date></date>
+    <mark></mark>
+    <output></output>
+    <meter value=""></meter>
+    <map name=""></map>
+    <area shape="" coords="" href="" alt="">
+    <datalist></datalist>
+    <progress></progress>
+    <slot></slot>
+    <wbr></wbr>
+
+
+    <meta>
+    <link rel="stylesheet" href="">
+    <script></script>
+    <noscript></noscript>
+    <template></template>
+
+
+    <a href=""></a>
+    <keygen></keygen>
+
+    <input type="text">
+    <label for=""></label>
+    <button></button>
+    
+
+    <audio src=""></audio>
+    <iframe src="" frameborder="0"></iframe>
+    <canvas></canvas>
+    <svg></svg>
+    <embed src="" type="">
+
+
+    <!-- Sectioning -->
+    <h2>Sectioning</h2>
+
+</body>
+</html>
