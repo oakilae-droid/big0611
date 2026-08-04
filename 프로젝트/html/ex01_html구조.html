@@ -1,31 +1,55 @@
-<!-- html5 파일의 기본 구조 -->
+<!-- HTML5 문서 구조 -->
 <!DOCTYPE html>
 <!-- 한글: ko, 영어: en, 일본어: ja, 중국어: zh -->
 <html lang="ko">
 <head>
+    <!-- 메타데이터? 데이터를 설명하는 데이터 -->
+    <!-- 페이지에 적힌 글자들을 UTF-8이라는 규칙으로 읽어서 화면에 보여준다. -->
     <meta charset="UTF-8">
+    <!-- 뷰포트: 모바일 화면 크기 -->
+    <!-- content="width=device-width": 모바일 화면 크기를 디바이스 크기에 맞춘다. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 타이틀: 문서 제목 -->
     <title>Document</title>
+    <!-- 외부CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 내부CSS -->
+    <style>
+        img {width: 200px; height: 100px;}
+    </style>
 </head>
 <body>
     <!-- HTML: Hyper Text Markup Language -->
     <!-- 하이퍼 텍스트: 웹 페이지 간 이동을 위한 텍스트 -->
     <a href="https://www.naver.com">네이버</a>
     <p>네이버</p>
-    <!-- 마크업 언어: 태그를 이용해 문서나 데이터의 구조를 표현하는 언어
+    <!-- 마크업 언어: 태그를 이용해 문서나 데이터의 구조를 표현하는 언어 
         SGML, XML, HTML, XHTML, ...
+        SGML: Standard Generalized Markup Language
+        XML: eXtensible Markup Language -> 사용자 정의 태그, 데이터 전송용!
         HTML: Hyper Text Markup Language
-        XML: Extensible Markup Language -> 사용자 정의 태그, 데이터 전송용
-        XHTML: Extensible Hyper Text Markup Language -> XML 기반의 HTML
-        HTML5: Hyper Text Markup Language 5        
-    -->
-    <!-- 속성
-             - 글로벌 속성: 모든 태그에 사용할 수 있는 속성
-             - class, id, style, title, ...
-             - 필수 속성
-             - 선택 속성
+        XHTML: eXtensible Hyper Text Markup Language
+     -->
+
+     <!-- 
+        속성
+            - 글로벌 속성: 모든 태그에 사용할 수 있는 속성
+            - class, id, style, title(툴립), ...
+            - 필수 속성
+            - 선택 속성
+        <시작태그>내용</끝태그>
         <시작태그 속성="값">내용</끝태그>
-        <시작태그 속성="값">
-    -->
+        <시작태그 속성="값" 속성="값">
+     -->
+    <p>문장입니다.</p>
+    <p class="red" id="blue1">문장입니다.</p>
+    <img class="red" id="blue2" src="https://picsum.photos/200/300" alt="random image" title="random image">
+
+    <!-- alt 없으면 비표준: 웹접근성 미준수 -->
+    <!-- 인라인CSS -->
+    <img src="https://picsum.photos/200/300" style="width: 100px; height: 100px;">
+    <br>
+
+    <a href="container/ex04_경로설정.html">ex04_경로설정</a>
 </body>
 </html>

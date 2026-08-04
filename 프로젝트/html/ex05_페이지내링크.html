@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 내부 링크</title>
+    <!-- 원 페이지 웹 사이트 -->
+    <!-- 스타일을 지정하는 방법
+        1. 인라인
+        2. 내부
+        3. 외부 -> 프로젝트
+    -->
+    <style>
+        /* reset */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+        }
+
+        section {
+            height: 100vh;
+            background: orange;
+        }
+
+        /* 
+            ~of-type은 타입(태그)을 구분한다.
+
+            section:nth-of-type(1): 섹션의 첫 번째 요소
+            section:nth-of-type(2): 섹션의 두 번째 요소
+            section:nth-of-type(3): 섹션의 세 번째 요소
+
+            ~child는 타입을 구분하지 않는다.
+            section:nth-child(1): body의 첫 번째 섹션 요소
+            section:nth-child(2): body의 두 번째 섹션 요소
+            section:nth-child(3): body의 세 번째 섹션 요소
+        */
+        section:nth-child(1) {
+            background: lightblue;
+        }
+
+        section:nth-child(2) {
+            background: lightgreen;
+        }
+
+        section:nth-child(3) {
+            background: lightcoral;
+        }
+
+        footer {
+            height: 100px;
+            background: #111;
+        }
+
+        footer a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #5f3d3d;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- body의 첫 번째 자식은 헤더 -->
+    <header style="height:95px; background: #ccc;">
+        <nav>
+            <ul>
+                <li><a href="#sec1">섹션1</a></li>
+                <li><a href="#sec2">섹션2</a></li>
+                <li><a href="#sec3">섹션3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- body의 두 번째 자식은 헤더 -->
+    <section id="sec1">비디오</section>
+    <!-- body의 세 번째 자식은 헤더 -->
+    <section id="sec2">탭</section>
+    <section id="sec3">패럴렉스 스크롤링</section>
+    <footer>
+        <a href="#top"><span>Top</span></a>
+    </footer>
+</body>
+
+</html>
