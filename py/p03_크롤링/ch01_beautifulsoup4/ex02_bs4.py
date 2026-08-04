@@ -18,7 +18,7 @@ body = soup.find('body')
 # print(body)
 div1 = soup.find('div')
 # print(div1)
-# soup.find_all('선택자') -> 리스트로 리턴
+# soup.find_all('태그명') -> 리스트로 리턴
 div_total = soup.find_all('div')
 # print(div_total)
 # [<div> 첫 번째 부분 </div>, <div> 두 번째 부분 </div>]
