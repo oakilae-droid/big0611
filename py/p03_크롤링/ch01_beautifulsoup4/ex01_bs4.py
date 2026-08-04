@@ -14,4 +14,9 @@ html_doc = '''
 
 # BeautifulSoup(텍스트, '파서종류')
 soup = BeautifulSoup(html_doc, 'html.parser')
-print(soup)
+# print(soup)
+# soup.find('선택자')
+head = soup.find('head')
+# print(head)
+body = soup.find('body')
+print(body)
