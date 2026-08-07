@@ -7,9 +7,11 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
     <style>
-        body {margin: 0;}
+        /* body {margin: 0;} */
         body * {outline: 1px dashed lime;}
-        div > div {width: 300px; height: 100px; flex-shrink: 0;}
+        div {height: 300px;}
+        /* div > div {height: 100px;} */
+        div > div {width: 100px; height: 100px;}
     </style>
 </head>
 <body>
@@ -23,25 +25,45 @@
 
         <table>태그 Layout(2차원) -> 비표준
         floating Layout -> flexbox Layout(1차원) -> grid Layout(2차원)
-
-        display: block|inline|inline-block|none;
         position: static|relative|absolute|fixed|sticky;
 
-        부모
+        박스 모델 속성
+            1. display: block|inline|inline-block|none;
+            2. width
+            3. height
+            4. padding
+            5. border
+            6. margin
+
+        outline: 1px dashed lime;
+
+        (기본형)
+        border-width: 두께;
+        border-style: 스타일;
+        border-color: 색;
+
+        (속기형)
+        border: 1px solide
+
+        부모(플렉스 컨테이너)
             display:flex;
                 1. flex-direction: 배치 방향
                     - row|column|row-reverse|column-reverse;
-                2. justify-content: 주축 정렬
+                2. justify-content: 주축 정렬(align)
                     - flex-start|flex-end|center|space-between|space-evenly|space-arround
                 3. align-items: 교차축 정렬
                     - flex-start|flex-end|center|baseline|stretch(기본값)
                 4. align-content: 교차축 정렬
                     - flex-wrap: wrap;이 적용되어 2줄 이상이 되어야 효과가 있다.
-                    - flex-start|flex-end|center|space-between|space-arround|stretch
+                    - flex-start|flex-end|center|space-between|space-arround|stretch(기본값)
                 5. flex-wrap
                     - wrap|nowrap(기본값)|wrap-reverse
-                6. ???
-        자식
+                6. flex-flow: 배치방향 줄바꿈; (속기형)
+                    -row nowrap(기본값)
+                7. gap, row-gap, column-gap 여백
+                    - 0(기본값)
+                    - 10px
+        자식(플렉스 아이템)
                 1. align-self: 교차축 정렬
                     flex-start|flex-end|center|baseline|stretch|auto(기본값-부모따라가는 속성값)
                 2. flex-grow: 
@@ -51,8 +73,9 @@
                     - 1; 수축(기본값)
                     - 0; 수축x
                 4. flex-basis
-                5. order
-                6. flex
+                5. flex: 성장 수축 크기; (속기형)
+                    - 0 1 auto(기본값)
+                6. order
     -->
     <!-- flex-direction: row;(기본값) 이면 주축이 가로, 교차축은 세로 -->
     <!-- flex-direction: column; 이면 주축이 세로, 교차축은 가로 -->
@@ -62,7 +85,7 @@
         <div class="align-self-stretch">c</div>
         <div class="align-self-auto">d</div>
     </div>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-column flex-wrap align-content-center gap-0">
         <div>1</div>
         <div>2</div>
         <div>3</div>
