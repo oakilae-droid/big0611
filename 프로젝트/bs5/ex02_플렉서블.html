@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox(플렉스 박스)</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <style>
+        body {margin: 0;}
+        body * {outline: 1px dashed lime;}
+        div > div {width: 300px; height: 100px; flex-shrink: 0;}
+    </style>
+</head>
+<body>
+    <!-- 
+        선택자 {속성: 값;}
+        .d-flex {display:flex;}
+        .flex-column {flex-direction: column;}
+
+        float: left|right;
+        clear: left|right|both;
+
+        <table>태그 Layout(2차원) -> 비표준
+        floating Layout -> flexbox Layout(1차원) -> grid Layout(2차원)
+
+        display: block|inline|inline-block|none;
+        position: static|relative|absolute|fixed|sticky;
+
+        부모
+            display:flex;
+                1. flex-direction: 배치 방향
+                    - row|column|row-reverse|column-reverse;
+                2. justify-content: 주축 정렬
+                    - flex-start|flex-end|center|space-between|space-evenly|space-arround
+                3. align-items: 교차축 정렬
+                    - flex-start|flex-end|center|baseline|stretch(기본값)
+                4. align-content: 교차축 정렬
+                    - flex-wrap: wrap;이 적용되어 2줄 이상이 되어야 효과가 있다.
+                    - flex-start|flex-end|center|space-between|space-arround|stretch
+                5. flex-wrap
+                    - wrap|nowrap(기본값)|wrap-reverse
+                6. ???
+        자식
+                1. align-self: 교차축 정렬
+                    flex-start|flex-end|center|baseline|stretch|auto(기본값-부모따라가는 속성값)
+                2. flex-grow: 
+                    - 0; 성장x 기본값
+                    - 1; 성장
+                3. flex-shrink: 수축
+                    - 1; 수축(기본값)
+                    - 0; 수축x
+                4. flex-basis
+                5. order
+                6. flex
+    -->
+    <!-- flex-direction: row;(기본값) 이면 주축이 가로, 교차축은 세로 -->
+    <!-- flex-direction: column; 이면 주축이 세로, 교차축은 가로 -->
+    <div class="d-flex flex-column align-items-stretch">
+        <div class="align-self-center">a</div>
+        <div class="align-self-end">b</div>
+        <div class="align-self-stretch">c</div>
+        <div class="align-self-auto">d</div>
+    </div>
+    <div class="d-flex flex-wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+</body>
+</html>

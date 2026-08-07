@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 url = 'https://ai-dev.tistory.com/1'
 html = urlopen(url)
 # print(html)
-# <html.client.HTTPResponse object at 0x00000276fe32f190>
+# <http.client.HTTPResponse object at 0x00000276FE32F190>
 # print(html.read())
 
 # 제목과 본문 정보 웹 크롤링

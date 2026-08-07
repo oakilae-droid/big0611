@@ -21,7 +21,7 @@ div1 = soup.find('div')
 # soup.find_all('태그명') -> 리스트로 리턴
 div_total = soup.find_all('div')
 # print(div_total)
-# [<div> 첫 번째 부분 </div>, <div> 두 번째 부분 </div>]
+# [<div>첫 번째 부분</div>, <div> 두 번째 부분 </div>]
 div1 = div_total[0]
 div2 = div_total[1]
 # print(div2)
