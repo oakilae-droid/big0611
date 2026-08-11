@@ -10,6 +10,7 @@ streamlit
 streamlit-autorefresh
 requests
 beautifulsoup4
+lxml
 selenium
 python-dotenv
 scikit-learn
