@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 # ==========================
 # 공공데이터포털 인증키
 # ==========================
+# ctrl+. : 자동 임포트
 load_dotenv()
 serviceKey = os.getenv("MOLIT_SERVICE_KEY")
 
@@ -28,8 +29,8 @@ MONTHS = [
     "202603",
     "202604",
     "202605",
-    "202606"
-    "202607",
+    "202606",
+    "202607"
 ]
 
 # ==========================
@@ -67,6 +68,7 @@ for region, lawd_cd in REGIONS.items():
         try:
             xml = urlopen(url).read()
             soup = BeautifulSoup(xml, "xml")
+            # print(soup.prettify())
             items = soup.find_all("item")
             trade_count = len(items)
             print(region, month, trade_count)

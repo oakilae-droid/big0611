@@ -3,6 +3,7 @@ from urllib.request import urlopen
 
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+from matplotlib import pyplot as plt
 import pandas as pd
 
 # 부동산 웹 크롤링
@@ -99,3 +100,24 @@ df = pd.DataFrame(
 print("\n========================")
 print(df)
 print("========================")
+
+# matplotlib으로 데이터 시각화
+# ==========================
+# 그래프
+# ==========================
+# rcParams: 실행 시간 설정값들
+# - rc(runtime configuration, 실행 시간 설정)
+plt.rcParams['font.family'] = 'Malgun Gothic'
+
+df01 = df[df['지역']=='종로구']
+df02 = df[df['지역']=='광진구']
+df03 = df[df['지역']=='관악구']
+
+plt.figure(figsize=(12, 6))
+
+plt.plot(df01['날짜'], df01['거래건수'], color='b', marker='o', linestyle='-', label='종로')
+plt.plot(df01['날짜'], df02['거래건수'], color='r', marker='^', linestyle='--', label='광진')
+plt.plot(df01['날짜'], df03['거래건수'], color='g', marker='s', linestyle='-.', label='관악')
+
+plt.legend(fontsize=20)
+plt.show()

@@ -99,3 +99,35 @@ df = pd.DataFrame(
 print("\n========================")
 print(df)
 print("========================")
+
+
+# 파이썬으로 CSV 파일 다루기
+# CSV(Comma-Separated Values)란 무엇인가요?
+# : 콤마로 구분한 텍스트 데이터 또는 파일
+# TSV(Tab-Separated Values)
+
+# 데이터 분석 결과를 CSV 파일로 저장
+# ==========================
+# CSV 저장
+# ==========================
+# 경로 복사(절대 주소) -> E:\\wi\\git\\big0611\\py\\p03_크롤링\\ch04_부동산\\서울_아파트_거래건수2.csv
+# 상대 경로 복사 -> r'py\p03_크롤링\ch04_부동산\서울_아파트_거래건수3.csv' -> r은 raw string
+# 상대 경로 복사 -> 'py\\p03_크롤링\\ch04_부동산\\서울_아파트_거래건수3.csv'
+# 상대 경로 복사 -> 'py/p03_크롤링/ch04_부동산/서울_아파트_거래건수3.csv'
+df.to_csv(
+    "서울_아파트_거래건수.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+df.to_csv(
+    "E:\\wi\\git\\big0611\\py\\p03_크롤링\\ch04_부동산\\서울_아파트_거래건수2.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+df.to_csv(
+    "py/p03_크롤링/ch04_부동산/서울_아파트_거래건수3.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+
+print("\nCSV 저장 완료")
