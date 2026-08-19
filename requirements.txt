@@ -14,5 +14,6 @@ lxml
 selenium
 python-dotenv
 openpyxl
+pymysql
 scikit-learn
 tensorflow
