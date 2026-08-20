@@ -31,6 +31,9 @@ replay_pid*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+# *.pyc -> puthon 바이트코드 캐시 파일
+# *.pyo -> 최적화(optimized) 바이트코드 파일
+# *.pyd -> Windows에서 사용되는 python 확장 모듈 파일
 *$py.class
 
 # C extensions
