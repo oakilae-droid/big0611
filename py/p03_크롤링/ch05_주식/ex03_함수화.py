@@ -50,7 +50,11 @@ def stock_crawling(item):
     fgn_own_ratio = float(tr3.find("td", {"class":"cle r"}).text)
 
     # 1Y 수익률
-    rel_return = float(tr3.find_all("span", {"class":"tcr"})[2].text)
+    # rel_return = float(tr3.find_all("span", {"class":"tcr"})[2].text)
+
+    rel_return1 = bs_obj.find_all('span', {'class':'tcr'})
+    rel_return2 = rel_return1[2].text.replace('+','')
+    rel_return = float(rel_return2)
 
     # 상단 테이블 웹 크롤링
     up_list = bs_obj.find("div", {"class":"corp_group2"})
@@ -63,7 +67,14 @@ def stock_crawling(item):
     per_12m = float(ul[1].find_all("li")[1].text)
 
     # 업종 PER
-    per_ind = float(ul[2].find_all("li")[1].text)
+    # per_ind = float(ul[2].find_all("li")[1].text)
+
+    raw_text = up_list.find_all('li')[5].text.strip()
+
+    if raw_text and raw_text != '-':
+        per_ind = float(up_list.find_all('li')[5].text)
+    else:
+        per_ind = 0.0
 
     # PBR(Price to Book Ratio, 주가순자산비율)
     pbr = float(ul[3].find_all("li")[1].text)
