@@ -209,3 +209,4 @@ def crawl_stock_data():
     print('크롤링 완료! 결과를 res에 담았습니다.')
 
     return res
+

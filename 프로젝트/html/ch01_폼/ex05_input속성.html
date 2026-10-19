@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input 속성</title>
+    <style>
+
+        /* 선택자의 종류
+            1. 아이디, 클래스, 타입(태그)
+            2. 전체(*), 그룹(,)
+            3. 가상클래스(:)
+                - :link, :visited, :active, :hover
+                - :nth-child(), :nth-of-type(), ...
+            4. 가상요소클래스(::)
+                - ::after
+                - ::before
+                - ::placeholder, ...
+            5. 속성([])
+        */
+
+        /* HTML size보다 CSS width가 우선 적용! */
+        /* 
+            1. 타입(태그) 선택자: input, a, div, ...
+            2. 가상클래스 선택자: :not()
+            3. 속성 선택자: [속성="값"]
+        
+        */
+
+        input:not(input[type="submit"]) {
+            width: 300px;
+        }
+
+        ::placeholder {
+            font-size: 10px;
+            color: rgba(255, 0, 0, .5);
+        }
+
+        input {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        input 태그에 사용 가능한 속성
+            type(필수)
+            id(글로벌)
+            name
+            value
+            required
+            pattern
+            placeholder
+            
+            title(글로벌)
+            min, max
+            multiple
+            readonly
+            disabled
+    -->
+
+    <form>
+        <!-- 
+            value: 입력 필드 초기값 지정 -> 필요에 따라 DB로 전송
+            size: text, search, tel, url, email, password 입력 유형에서 작동
+
+            required속성은 텍스트, 검색, URL, 전화번호, 이메일, 비밀번호, 날짜 선택기, 숫자, 체크박스, 라디오 버튼, 파일 등의 입력 유형과 함께 작동합니다.
+
+            autofocus속성은 페이지 로드 시 입력 필드가 자동으로 포커스를 받도록 지정
+         -->
+        <label for="userid">ID:</label><br>
+        <input type="text" id="userid" name="userid" size="50" required minlength="4" maxlength="20"
+            pattern="[a-z0-9]{4,20}" title="영문 소문자와 숫자를 사용하여 4~20자로 입력하세요." placeholder="영문 소문자와 숫자를 사용하여 4~20자로 입력하세요."
+            autofocus><br>
+        <label for="userpw">Last name:</label><br>
+        <input type="password" id="userpw" name="userpw" value="Doe" disabled size="4"><br>
+
+        <input type="search" id="search" name="search" value="읽기전용" size="20" readonly><br>
+        <input type="tel" id="tel" name="tel" value="010-1234-5678"><br>
+        <input type="url" id="url" name="url" value="https://www.naver.com"><br>
+        <input type="email" id="email" name="email" value="hong@naver.com"><br>
+
+        <input type="submit" value="버튼이름">
+    </form>
+
+
+    <form>
+        <!-- number, range, date, datetime, month, week -->
+        <label for="datemax">Enter a date before 1980-01-01:</label>
+        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+        <label for="datemin">Enter a date after 2000-01-01:</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+        <label for="quantity">Quantity (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+
+        <label for="range">range (between 1 and 5):</label>
+        <input type="range" id="range" name="range" min="1" max="5">
+    </form>
+
+    <form>
+        <!-- multiple속성은 사용자가 입력 필드에 두 개 이상의 값을 입력할 수 있음을 지정 -->
+        <label for="files">Select files:</label>
+        <input type="file" id="files" name="files" multiple>
+    </form>
+
+    <!-- pattern속성은 폼이 제출될 때 입력 필드의 값을 검사하는 데 사용되는 정규 표현식을 지정 -->
+    <form>
+        <label for="country_code">Country code:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}"
+            title="Three letter country code">
+    </form>
+
+    <form>
+        <!-- 
+            placeholder속성은 입력 필드의 예상 값(샘플 값 또는 예상 형식에 대한 간 략한 설명)을 설명하는 짧은 힌트를 지정합니다. 
+            text, search, url, number, tel, email, password 등의 입력 유형
+         -->
+        <label for="phone">Enter a phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" pattern="010-[0-9]{4}-[0-9]{4}">
+    </form>
+
+    <form>
+        <label for="points">Points:</label>
+        <input type="number" id="points" name="points" min="1" max="9" step="2">
+    </form>
+
+    <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+    </form>
+
+    <form action="/action_page.php" autocomplete="on">
+        <!-- 
+            autocomplete속성은 폼이나 입력 필드에 자동 완성 기능을 켜거나 끌지 여부를 지정
+            텍스트, 검색, URL, 전화번호, 이메일, 비밀번호, 날짜 선택기, 범위 및 색상 유형 <form>과 함께 작동
+          -->
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autocomplete="off"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div style="height:500px;"></div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad3)"/>
+  <g transform="translate(60, 40)">
+    <!-- Cookbook -->
+    <rect x="30" y="30" width="200" height="180" rx="5" fill="white" opacity="0.9"/>
+    <rect x="40" y="40" width="180" height="160" rx="3" fill="#f7fafc"/>
+    
+    <!-- Recipe lines -->
+    <rect x="50" y="55" width="120" height="8" rx="2" fill="#4facfe"/>
+    <rect x="50" y="70" width="100" height="6" rx="2" fill="#cbd5e0"/>
+    <rect x="50" y="82" width="140" height="6" rx="2" fill="#cbd5e0"/>
+    <rect x="50" y="94" width="110" height="6" rx="2" fill="#cbd5e0"/>
+    <rect x="50" y="106" width="130" height="6" rx="2" fill="#cbd5e0"/>
+    <rect x="50" y="118" width="90" height="6" rx="2" fill="#cbd5e0"/>
+    
+    <!-- Ingredients icons -->
+    <circle cx="70" cy="150" r="15" fill="#4facfe"/>
+    <circle cx="110" cy="150" r="15" fill="#00f2fe"/>
+    <circle cx="150" cy="150" r="15" fill="#4facfe"/>
+    <circle cx="190" cy="150" r="15" fill="#00f2fe"/>
+    
+    <!-- Chef hat -->
+    <ellipse cx="130" cy="230" rx="40" ry="20" fill="white"/>
+    <rect x="100" y="230" width="60" height="30" fill="white"/>
+    <ellipse cx="130" cy="230" rx="35" ry="15" fill="white"/>
+    
+    <!-- Utensils -->
+    <line x1="250" y1="80" x2="250" y2="180" stroke="white" stroke-width="4"/>
+    <line x1="250" y1="80" x2="250" y2="120" stroke="white" stroke-width="4"/>
+    <line x1="240" y1="80" x2="240" y2="110" stroke="white" stroke-width="3"/>
+    <line x1="260" y1="80" x2="260" y2="110" stroke="white" stroke-width="3"/>
+    
+    <line x1="270" y1="80" x2="270" y2="180" stroke="white" stroke-width="4"/>
+    <ellipse cx="270" cy="80" rx="8" ry="12" fill="white"/>
+  </g>
+  <text x="200" y="290" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Recipe Platform</text>
+</svg>

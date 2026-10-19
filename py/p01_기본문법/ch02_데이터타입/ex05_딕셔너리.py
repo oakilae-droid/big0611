@@ -7,13 +7,13 @@
 }
 '''
 # 생성
-
 my_dict = {
-    'name' :'헤리',
-    'age' : 27,
-    'height' : 190,
-    'weight' : 99.9,    
+    'name': '헤리',
+    'age': 27,
+    'height': 190,
+    'weight': 99.9
 }
+
 print(my_dict)
 
 # 선택
@@ -24,12 +24,12 @@ print(my_dict['age'])
 my_dict['age'] = 28
 print(my_dict)
 
-# 딕셔너리.update({키 : 값})
-my_dict.update({'weight' : 100})
+# 딕셔너리.update({키:값})
+my_dict.update({'weight': 100})
 print(my_dict)
 
 # 추가
-my_dict.update({'address' : '부산'})
+my_dict.update({'address': '부산'})
 print(my_dict)
 
 # 삭제
@@ -37,7 +37,7 @@ print(my_dict)
 my_dict.popitem()
 print(my_dict)
 
-# 딕셔너리.pop(키): 해당 키를 삭제
+# 딕셔너리.pop(키)
 my_dict.pop('age')
 print(my_dict)
 
@@ -46,4 +46,4 @@ my_dict.clear()
 print(my_dict)
 
 del my_dict
-# print(my_dict)    # 딕셔너리 객체 삭제되어 에러
+# print(my_dict)

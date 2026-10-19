@@ -111,6 +111,7 @@ print("========================")
 # CSV 저장
 # ==========================
 # 경로 복사(절대 주소) -> E:\\wi\\git\\big0611\\py\\p03_크롤링\\ch04_부동산\\서울_아파트_거래건수2.csv
+
 # 상대 경로 복사 -> r'py\p03_크롤링\ch04_부동산\서울_아파트_거래건수3.csv' -> r은 raw string
 # 상대 경로 복사 -> 'py\\p03_크롤링\\ch04_부동산\\서울_아파트_거래건수3.csv'
 # 상대 경로 복사 -> 'py/p03_크롤링/ch04_부동산/서울_아파트_거래건수3.csv'
@@ -120,14 +121,13 @@ df.to_csv(
     encoding="utf-8-sig"
 )
 df.to_csv(
-    "E:\\wi\\git\\big0611\\py\\p03_크롤링\\ch04_부동산\\서울_아파트_거래건수2.csv",
-    index=False,
-    encoding="utf-8-sig"
-)
-df.to_csv(
-    "py/p03_크롤링/ch04_부동산/서울_아파트_거래건수3.csv",
+    "py/p03_크롤링/ch04_부동산/data/서울_아파트_거래건수3.csv",
     index=False,
     encoding="utf-8-sig"
 )
 
-print("\nCSV 저장 완료")
+# 파이썬으로 엑셀 파일 다루기
+# 데이터 분석 결과를 엑셀 파일로 저장
+df.to_excel('py/p03_크롤링/ch04_부동산/data/서울_아파트_거래건수3.xlsx', index=False)
+
+print("\ncsv, xlsx 저장 완료")

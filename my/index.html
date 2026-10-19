@@ -3,311 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인 포트폴리오</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FullPage.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>홍길동 - Big Data Developer Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Hong Gildong</div>
+            <ul class="nav-links">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section 1: Profile -->
+    <section id="profile" class="section profile-section">
         <div class="container">
-            <a class="navbar-brand" href="#profile">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#profile">프로필</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#techstack">기술스택</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">포트폴리오</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">연락처</a>
-                    </li>
-                </ul>
+            <div class="profile-content">
+                <div class="profile-image">
+                    <div class="profile-placeholder">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="45" fill="#667eea"/>
+                            <text x="50" y="55" text-anchor="middle" fill="white" font-size="24" font-weight="bold">홍</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="profile-text">
+                    <h1 class="profile-title">홍길동</h1>
+                    <p class="profile-subtitle">Big Data Developer</p>
+                    <p class="profile-description">
+                        빅데이터 1000시간 과정을 수료한 데이터 분석 및 개발 전문가입니다. 
+                        대규모 데이터 처리 및 분석에 열정을 가지고 있으며, 
+                        최신 기술을 활용한 효율적인 솔루션 개발에 주력하고 있습니다.
+                    </p>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <span class="info-label">나이:</span>
+                            <span class="info-value">20대 후반</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">경력:</span>
+                            <span class="info-value">빅데이터 1000시간 수료</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">관심분야:</span>
+                            <span class="info-value">Data Engineering, Web Development</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- FullPage Sections -->
-    <div id="fullpage">
-        <!-- Section 1: Profile -->
-        <div class="section" id="profile">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="profile-content">
-                            <h1 class="display-3 fw-bold mb-3">🚀 Yo! What's up?</h1>
-                            <h2 class="h2 mb-4">개발자 <span class="highlight">홍길동</span>입니다</h2>
-                            <p class="lead mb-4">
-                                코드로 세상을 바꾸는 <strong>트렌디한 개발자</strong>입니다. 😎
-                                평범한 건 싫어요. 항상 새로운 것에 도전하고,
-                                사용자가 "와!" 할 만한 경험을 만드는 게 제 목표입니다.
-                                버그는 제 적수지만, 해결하면 제 친구가 됩니다. 💪
-                            </p>
-                            <div class="social-links mb-4">
-                                <a href="#" class="btn btn-outline-primary btn-lg me-2">🐙 GitHub</a>
-                                <a href="#" class="btn btn-outline-primary btn-lg me-2">💼 LinkedIn</a>
-                                <a href="#" class="btn btn-outline-primary btn-lg">✍️ Blog</a>
-                            </div>
-                            <a href="#techstack" class="btn btn-primary btn-lg">🔥 제 실력 보러가기</a>
-                        </div>
+    <!-- Section 2: Skills -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3 class="skill-title">Data Analysis</h3>
+                    <p class="skill-description">Python, Pandas, NumPy를 활용한 데이터 분석 및 시각화</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="profile-image">
-                            <div class="image-placeholder">
-                                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="200" cy="200" r="180" fill="#e3f2fd"/>
-                                    <circle cx="200" cy="150" r="60" fill="#2196f3"/>
-                                    <ellipse cx="200" cy="320" rx="100" ry="80" fill="#2196f3"/>
-                                </svg>
-                            </div>
-                        </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3 class="skill-title">Web Development</h3>
+                    <p class="skill-description">HTML5, CSS3, JavaScript를 활용한 반응형 웹 개발</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3 class="skill-title">Database</h3>
+                    <p class="skill-description">MySQL, MongoDB를 활용한 데이터베이스 설계 및 관리</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3 class="skill-title">Cloud & DevOps</h3>
+                    <p class="skill-description">AWS, Docker, Git을 활용한 클라우드 배포 및 협업</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-title">Machine Learning</h3>
+                    <p class="skill-description">Scikit-learn, TensorFlow를 활용한 머신러닝 모델 개발</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3 class="skill-title">Responsive Design</h3>
+                    <p class="skill-description">모든 디바이스에서 최적화된 사용자 경험 제공</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Section 2: Tech Stack -->
-        <div class="section" id="techstack">
-            <div class="container">
-                <div class="section-title text-center mb-5">
-                    <h2 class="display-4 fw-bold">⚡ 기술 스택</h2>
-                    <p class="lead">마스터한 기술들 - 끝없는 배움의 여정 🎯</p>
+    <!-- Section 3: Portfolio -->
+    <section id="portfolio" class="section portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/subway.svg" alt="Subway Project">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Subway Data Analysis</h3>
+                        <p class="portfolio-description">지하철 승하차 데이터를 분석하여 이동 패턴을 시각화하고 최적 경로를 제안하는 프로젝트</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <a href="https://www.naver.com" target="_blank" class="portfolio-link">View Project →</a>
+                    </div>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <h3>🎨 Frontend</h3>
-                            <p>HTML5, CSS3, JavaScript, React, Vue.js, TypeScript<br><small>UI/UX에 미친 듯이 집중합니다</small></p>
-                        </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/movieflow.svg" alt="MovieFlow Project">
                     </div>
-                    <div class="col-md-4">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <h3>⚙️ Backend</h3>
-                            <p>Node.js, Python, Java, Spring Boot, Express<br><small>안정적이고 빠른 서버가 제 자존심입니다</small></p>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">MovieFlow</h3>
+                        <p class="portfolio-description">영화 추천 시스템으로 사용자의 취향을 분석하고 개인화된 영화를 추천하는 플랫폼</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">React</span>
                         </div>
+                        <a href="https://movieflowkr.onrender.com" target="_blank" class="portfolio-link">View Project →</a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h3>🗄️ Database</h3>
-                            <p>MySQL, PostgreSQL, MongoDB, Redis<br><small>데이터는 제 소중한 보물입니다</small></p>
-                        </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/recipe.svg" alt="Recipe Project">
                     </div>
-                    <div class="col-md-4">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <h3>☁️ Cloud & DevOps</h3>
-                            <p>AWS, Docker, Kubernetes, CI/CD, Git<br><small>자동화는 제 두 번째 이름입니다</small></p>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Recipe Platform</h3>
+                        <p class="portfolio-description">레시피 공유 및 추천 플랫폼으로 재료 기반 검색과 사용자 커뮤니티 기능 제공</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h3>🛠️ Tools</h3>
-                            <p>VS Code, Figma, Postman, Jira, Slack<br><small>좋은 도구는 좋은 결과를 만듭니다</small></p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="tech-card">
-                            <div class="tech-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <h3>📱 Mobile</h3>
-                            <p>React Native, Flutter, Android, iOS<br><small>모바일도 문제없습니다</small></p>
-                        </div>
+                        <a href="https://recipekr.onrender.com" target="_blank" class="portfolio-link">View Project →</a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Section 3: Portfolio -->
-        <div class="section" id="portfolio">
-            <div class="container">
-                <div class="section-title text-center mb-5">
-                    <h2 class="display-4 fw-bold">🎬 포트폴리오</h2>
-                    <p class="lead">열정을 쏟은 프로젝트들 - 실력 증명 🏆</p>
+    <!-- Section 4: Contact -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Get in Touch</h3>
+                    <p class="contact-description">
+                        프로젝트 협업이나 채용 문의는 아래 폼을 통해 연락해 주세요.
+                        빠른 시일 내에 답변 드리겠습니다.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">honggildong@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span class="contact-text">010-1234-5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span class="contact-text">Seoul, South Korea</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder portfolio-img">
-                                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="300" height="200" fill="#bbdefb"/>
-                                        <rect x="50" y="40" width="200" height="120" fill="#1976d2"/>
-                                        <rect x="70" y="60" width="160" height="80" fill="#e3f2fd"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <h3>🛍️ 이커머스 플랫폼</h3>
-                                <p>사용자 경험을 혁신한 쇼핑몰 - 결제 전환율 40% 향상! 📈</p>
-                                <div class="portfolio-tags">
-                                    <span class="badge bg-primary">React</span>
-                                    <span class="badge bg-success">Node.js</span>
-                                    <span class="badge bg-info">MongoDB</span>
-                                </div>
-                            </div>
+                <div class="contact-form-container">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+                        <input type="hidden" name="access_key" value="f00a5bbd-1cee-4a4b-aff8-062f3a2a2010">
+                        <div class="form-group">
+                            <label for="name">이름</label>
+                            <input type="text" id="name" name="name" required placeholder="홍길동">
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder portfolio-img">
-                                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="300" height="200" fill="#c8e6c9"/>
-                                        <circle cx="150" cy="100" r="60" fill="#4caf50"/>
-                                        <rect x="120" y="80" width="60" height="40" fill="#e8f5e9"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <h3>✅ 태스크 관리 앱</h3>
-                                <p>실시간 협업의 새로운 기준 - 팀 생산성 200% 증가! 🚀</p>
-                                <div class="portfolio-tags">
-                                    <span class="badge bg-primary">Vue.js</span>
-                                    <span class="badge bg-warning">Firebase</span>
-                                    <span class="badge bg-secondary">TypeScript</span>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="subject">제목</label>
+                            <input type="text" id="subject" name="subject" required placeholder="프로젝트 문의">
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder portfolio-img">
-                                    <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="300" height="200" fill="#fff9c4"/>
-                                        <polygon points="150,30 280,170 20,170" fill="#fbc02d"/>
-                                        <rect x="130" y="100" width="40" height="70" fill="#fffde7"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <h3>✈️ 여행 플래너</h3>
-                                <p>여행의 모든 것을 한 곳에 - 앱스토어 4.8점 별점! ⭐</p>
-                                <div class="portfolio-tags">
-                                    <span class="badge bg-primary">React Native</span>
-                                    <span class="badge bg-danger">Redux</span>
-                                    <span class="badge bg-dark">API</span>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="phone">전화번호</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678">
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="email">이메일</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">메시지</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="문의 내용을 입력해 주세요."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">전송하기</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
                 </div>
             </div>
         </div>
-
-        <!-- Section 4: Contact -->
-        <div class="section" id="contact">
-            <div class="container">
-                <div class="section-title text-center mb-5">
-                    <h2 class="display-4 fw-bold">📬 연락처</h2>
-                    <p class="lead">함께 일하고 싶으시다면? 언제든 연락주세요! 🤝</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>이메일</h4>
-                                    <p>honggildong@example.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>전화번호</h4>
-                                    <p>010-1234-5678</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>위치</h4>
-                                    <p>서울특별시 강남구</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <form class="contact-form">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="이름" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="이메일" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="제목" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="5" placeholder="메시지" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100">🚀 메시지 보내기</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; 2024 홍길동. Made with ❤️ and lots of ☕</p>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
-                    </div>
+            <div class="footer-content">
+                <p class="footer-text">© 2024 Hong Gildong. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/honggildong" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/honggildong" target="_blank">LinkedIn</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FullPage.js JS -->
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
